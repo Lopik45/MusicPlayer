@@ -9,4 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="112dp"
         android:text="@string/welcome" />
+
+    <Button
+        android:id="@+id/mp3Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/getMp3Button" />
 </LinearLayout>

@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Music Player</string>
     <string name="welcome">Welcome</string>
+    <string name="getMp3Button"> Get all MP3 files</string>
 </resources>

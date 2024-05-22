@@ -3,8 +3,7 @@ package com.example.musicplayer
 import android.app.Application
 import com.example.musicplayer.database.AppDatabase
 
-import com.example.musicplayer.database.Music
-import com.example.musicplayer.datas.MusicInfo
+import com.example.musicplayer.datas.Music
 
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
@@ -21,17 +20,12 @@ class DatabaseManager(application: Application) : AndroidViewModel(application){
         emit(musics)
     }
 
-    fun write(music: MusicInfo) {
+    fun write(music: Music) {
         //TODO: do conversion between MusicInfo(complex attribute) and Music(Primitive attribute)
-        val dataMusic : Music = Music(
-            0,
-            music.title,
-            music.author
-        )
 
         viewModelScope.launch {
             Log.d("DatabaseManager", "Write Music in database")
-            database.musicDao().insertMusic(dataMusic)
+            database.musicDao().insertMusic(music)
             Log.d("DatabaseManager", "Finish writing Music in database")
         }
     }
